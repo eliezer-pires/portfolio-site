@@ -1,0 +1,7 @@
+# robots.txt para Portfolio Eliezer Pires
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://eliezerpires.dev/sitemap.xml
