@@ -28,7 +28,7 @@ const skillCategories = [
       "Linux (administração, hardening)",
       "Python para automação",
       "Bash scripting",
-      "Git, GitHub, GitLab",
+      "GitHub Actions, GitLab CI",
     ],
   },
   {
