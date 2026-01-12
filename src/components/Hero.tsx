@@ -97,15 +97,18 @@ export default function Hero() {
 
           {/* FOTO */}
           <div className="flex justify-center md:justify-end">
-            <div className="relative w-72 h-96 rounded-2xl shadow-2xl border border-dark-800 overflow-hidden">
+            <div className="relative w-80 h-[28rem] md:w-96 md:h-[32rem] rounded-2xl shadow-2xl border border-dark-800 overflow-hidden">
               <Image
                 src="/images/eliezerpires.png"
                 alt="Eliezer Pires - DevOps Engineer"
                 fill
                 priority
-                sizes="(max-width: 768px) 288px, 288px"
-                quality={95}
+                sizes="(max-width: 768px) 320px, 384px"
+                quality={100}
                 className="object-cover object-top"
+                style={{
+                  imageRendering: "-webkit-optimize-contrast",
+                }}
               />
             </div>
           </div>
