@@ -78,14 +78,15 @@ export default function Learning() {
           Roadmap de estudos e desenvolvimento profissional
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Estudos Atuais */}
+          <div>
             <div className="flex items-center gap-3 mb-6">
               <BookOpen className="text-primary-500" size={28} />
               <h3 className="text-2xl font-semibold">Estudos Atuais</h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {currentLearning.map((item, index) => (
                 <div key={index} className="card">
                   <div className="flex items-start justify-between mb-3">
@@ -111,28 +112,7 @@ export default function Learning() {
               ))}
             </div>
           </div>
-
-          <div className="card mt-6 bg-dark-800/50">
-            <div className="flex items-center gap-3 mb-4">
-              <TrendingUp className="text-primary-500" size={24} />
-              <h4 className="text-lg font-semibold text-gray-100">
-                Princípios de Aprendizado
-              </h4>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {learningPrinciples.map((principle, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-2 text-sm text-gray-300"
-                >
-                  <span className="text-primary-500">✓</span>
-                  <span>{principle}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
-
         <div>
           <div className="flex items-center gap-3 mb-6">
             <Target className="text-primary-500" size={28} />
