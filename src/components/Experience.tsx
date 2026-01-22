@@ -21,16 +21,16 @@ const certifications = [
     name: "LPIC-1: Linux Administrator",
     issuer: "Linux Professional Institute",
     status: "Certificado - Ativo",
-    icon: "🐧",
-    link: "https://www.credly.com/badges/74be2f28-2ecb-4b2a-a38d-ec7e9699c9ff",
+    icon: "https://images.credly.com/size/110x110/images/c0ffb784-86af-4e2e-8f97-fe4fff1aa57a/blob",
+    link: "https://www.credly.com/badges/74be2f28-2ecb-4b2a-a38d-ec7e9699c9ff/public_url",
     verify: "https://lpi.org/verify/LPI000664778/anx7knhb4a",
   },
   {
     name: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
     status: "Ativo",
-    icon: "☁️",
-    link: "https://www.credly.com/earner/earned/badge/534be0f2-58cb-46de-942b-ecc64dd5a888",
+    icon: "https://images.credly.com/size/110x110/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+    link: "https://www.credly.com/badges/534be0f2-58cb-46de-942b-ecc64dd5a888/public_url",
     verify:
       "https://cp.certmetrics.com/amazon/en/public/verify/credential/e047f460e0614fbe961e3955f38c5e44",
   },
@@ -38,8 +38,8 @@ const certifications = [
     name: "Introduction to Cybersecurity",
     issuer: "Cisco",
     status: "Ativo",
-    icon: "🔒",
-    link: "https://www.credly.com/earner/earned/badge/e6cbc626-e03c-4c5c-b434-11e23274767a",
+    icon: "https://images.credly.com/size/110x110/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
+    link: "https://www.credly.com/badges/e6cbc626-e03c-4c5c-b434-11e23274767a/public_url",
   },
 ];
 
@@ -122,23 +122,25 @@ export default function Experience() {
                         {cert.status}
                       </span>
                       {cert.link && (
-                            <a href={cert.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-xs text-primary-400 hover:text-primary-300 transition-colors"
-                          >
-                            Ver Badge no Credly →
-                          </a>
-                        )}
-                        {cert.verify && (
-                            <a href={cert.verify}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-xs text-primary-400 hover:text-primary-300 transition-colors"
-                          >
-                            Verificar Certificação →
-                          </a>
-                        )}
+                        <a
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-primary-400 hover:text-primary-300 transition-colors"
+                        >
+                          Ver Badge no Credly →
+                        </a>
+                      )}
+                      {cert.verify && (
+                        <a
+                          href={cert.verify}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-primary-400 hover:text-primary-300 transition-colors"
+                        >
+                          Verificar Certificação →
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>
