@@ -18,22 +18,28 @@ const experiences = [
 
 const certifications = [
   {
+    name: "LPIC-1: Linux Administrator",
+    issuer: "Linux Professional Institute",
+    status: "Certificado - Ativo",
+    icon: "🐧",
+    link: "https://www.credly.com/badges/74be2f28-2ecb-4b2a-a38d-ec7e9699c9ff",
+    verify: "https://lpi.org/verify/LPI000664778/anx7knhb4a",
+  },
+  {
     name: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
     status: "Ativo",
     icon: "☁️",
+    link: "https://www.credly.com/earner/earned/badge/534be0f2-58cb-46de-942b-ecc64dd5a888",
+    verify:
+      "https://cp.certmetrics.com/amazon/en/public/verify/credential/e047f460e0614fbe961e3955f38c5e44",
   },
   {
-    name: "Fortinet Cybersecurity",
-    issuer: "Fortinet",
+    name: "Introduction to Cybersecurity",
+    issuer: "Cisco",
     status: "Ativo",
     icon: "🔒",
-  },
-  {
-    name: "LPIC-1 (101)",
-    issuer: "Linux Professional Institute",
-    status: "Certificado - Estudando 102",
-    icon: "🐧",
+    link: "https://www.credly.com/earner/earned/badge/e6cbc626-e03c-4c5c-b434-11e23274767a",
   },
 ];
 
@@ -115,6 +121,24 @@ export default function Experience() {
                       <span className="px-3 py-1 bg-green-600/20 text-green-400 text-xs rounded-full">
                         {cert.status}
                       </span>
+                      {cert.link && (
+                            <a href={cert.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs text-primary-400 hover:text-primary-300 transition-colors"
+                          >
+                            Ver Badge no Credly →
+                          </a>
+                        )}
+                        {cert.verify && (
+                            <a href={cert.verify}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs text-primary-400 hover:text-primary-300 transition-colors"
+                          >
+                            Verificar Certificação →
+                          </a>
+                        )}
                     </div>
                   </div>
                 </div>
