@@ -20,7 +20,7 @@ const certifications = [
   {
     name: "LPIC-1: Linux Administrator",
     issuer: "Linux Professional Institute",
-    status: "Certificado - Ativo",
+    status: "Ativo",
     badge:
       "https://images.credly.com/size/110x110/images/c0ffb784-86af-4e2e-8f97-fe4fff1aa57a/blob",
     link: "https://www.credly.com/badges/74be2f28-2ecb-4b2a-a38d-ec7e9699c9ff/public_url",
@@ -147,7 +147,7 @@ export default function Experience() {
                           rel="noopener noreferrer"
                           className="text-xs text-primary-400 hover:text-primary-300 transition-colors"
                         >
-                          Verificar Certificação →
+                          Verificar Certificação
                         </a>
                       )}
                     </div>
