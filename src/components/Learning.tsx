@@ -21,11 +21,6 @@ const currentLearning = [
     topics: ["Módulos", "State Management", "Workspaces"],
     status: "Implementação de IaC em projeto real de Datacenter.",
   },
-  {
-    area: "Observabilidade",
-    topics: ["Prometheus", "Grafana", "Alertmanager", "SLI/SLO/SLA"],
-    status: "Aprofundamento",
-  },
 ];
 
 const certificationRoadmap = [
@@ -78,7 +73,7 @@ export default function Learning() {
           Roadmap de estudos e desenvolvimento profissional
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Estudos Atuais */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -114,7 +109,7 @@ export default function Learning() {
           </div>
         </div>
         <div>
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-4 mb-6">
             <Target className="text-primary-500" size={28} />
             <h3 className="text-2xl font-semibold">Roadmap 2026</h3>
           </div>
