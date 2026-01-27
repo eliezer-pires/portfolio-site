@@ -12,14 +12,14 @@ const currentLearning = [
     status: "Em progresso",
   },
   {
-    area: "Terraform",
-    topics: ["Módulos", "State Management", "Workspaces"],
-    status: "Preparação para certificação",
-  },
-  {
     area: "CI/CD",
     topics: ["GitHub Actions", "GitLab CI", "ArgoCD"],
     status: "Estudos práticos",
+  },
+  {
+    area: "Terraform",
+    topics: ["Módulos", "State Management", "Workspaces"],
+    status: "Implementação de IaC em projeto real de Datacenter.",
   },
   {
     area: "Observabilidade",
@@ -33,29 +33,29 @@ const certificationRoadmap = [
     name: "LFCS (Linux Foundation)",
     status: "Planejada",
     priority: "Alta",
-    timeline: "Maio 2026",
-    quarter: "Q2",
-  },
-  {
-    name: "HashiCorp Terraform Associate",
-    status: "Planejada",
-    priority: "Alta",
-    timeline: "Junho 2026",
+    timeline: "Inicio de Maio 2026",
     quarter: "Q2",
   },
   {
     name: "AWS Solutions Architect Associate",
     status: "Planejada",
     priority: "Alta",
-    timeline: "Agosto 2026",
+    timeline: "Inicio de Agosto 2026",
+    quarter: "Q3",
+  },
+  {
+    name: "HashiCorp Terraform Associate",
+    status: "Planejada",
+    priority: "Alta",
+    timeline: "Meio de Setembro 2026",
     quarter: "Q3",
   },
   {
     name: "GitHub Actions Certification",
     status: "Planejada",
     priority: "Média",
-    timeline: "Setembro 2026",
-    quarter: "Q3",
+    timeline: "Meio de Outubro 2026",
+    quarter: "Q4",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function Learning() {
           Roadmap de estudos e desenvolvimento profissional
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-2 gap-8">
           {/* Estudos Atuais */}
           <div>
             <div className="flex items-center gap-3 mb-6">
