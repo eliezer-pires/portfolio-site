@@ -26,6 +26,9 @@ const skillCategories = [
     title: "Sistemas & Automação",
     skills: [
       "Linux (administração, hardening)",
+      "Virtualização resiliente (Proxmox / XCP-Ng)",
+      "Backup centralizado (PBS)",
+      "Gestão de secrets (HashiCorp Vault)",
       "Python para automação",
       "Bash scripting",
       "GitHub Actions, GitLab CI",
@@ -44,7 +47,13 @@ const skillCategories = [
   {
     icon: Eye,
     title: "Observabilidade",
-    skills: ["Zabbix", "Grafana", "Prometheus (estudos)", "CloudWatch"],
+    skills: [
+      "Zabbix",
+      "Grafana",
+      "Prometheus (estudos)",
+      "Centralização de logs para auditoria",
+      "CloudWatch",
+    ],
   },
   {
     icon: Code,

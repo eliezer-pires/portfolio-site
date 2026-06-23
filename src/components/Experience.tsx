@@ -6,12 +6,15 @@ const experiences = [
     company: "Força Aérea Brasileira",
     period: "Atual",
     description:
-      "Responsável por infraestrutura de redes, administração de sistemas Linux, automação de processos e monitoramento. Transição ativa para práticas DevOps/SRE.",
+      "Referência técnica em infraestrutura de redes, virtualização e automação de ambientes críticos. Atuação na redução do MTTR de incidentes via provisionamento declarativo e cultura SRE, com foco em resiliência, governança e continuidade de serviços.",
     achievements: [
-      "Implementação de monitoramento com Zabbix e Grafana em infraestrutura crítica",
-      "Automação de tarefas operacionais com Python e Bash",
-      "Administração de redes Cisco em ambientes de alta disponibilidade",
-      "Migração e modernização de infraestrutura TI",
+      "Redução do MTTR de incidentes lógicos de dias para minutos via automação de provisionamento",
+      "Definição de Checkpoints Críticos (Go/No-Go) para controle de mudanças em serviços de missão crítica",
+      "Provisionamento imutável e idempotente com Terraform e Ansible em ambientes on-premises auditáveis",
+      "Virtualização resiliente (Proxmox/XCP-Ng) com backup centralizado via PBS",
+      "Observabilidade com Zabbix e Grafana e centralização de logs para auditoria técnica",
+      "Automação operacional com Python e Bash e administração de redes Cisco em alta disponibilidade",
+      "Documentação técnica orientada à capacitação e transferência de conhecimento para equipes internas",
     ],
   },
 ];

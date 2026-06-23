@@ -29,8 +29,14 @@ export default function About() {
               administração de ambientes conteinerizados e automatizados,
               atuando fortemente com práticas{" "}
               <span className="tech-highlight">DevOps</span> e fundamentos de{" "}
-              <span className="tech-highlight">SRE</span>. Experiência prática
-              com <span className="tech-highlight">Kubernetes</span>, incluindo
+              <span className="tech-highlight">SRE</span>. Meu foco está em
+              resolver a relação{" "}
+              <span className="tech-highlight">Técnicos × Tempo</span>: aplicar
+              automação (IaC) e cultura SRE para reduzir o{" "}
+              <span className="tech-highlight">MTTR</span> de serviços lógicos
+              complexos de dias para minutos, poupando a força de trabalho
+              técnica em estruturas críticas. Experiência prática com{" "}
+              <span className="tech-highlight">Kubernetes</span>, incluindo
               administração de clusters, criação e manutenção de manifestos
               YAML, gerenciamento de Pods, Deployments e Services, além da
               configuração de escalabilidade automática com HPA.
@@ -46,7 +52,8 @@ export default function About() {
             </p>
 
             <p>
-              Atuação com Infraestrutura como Código e automação utilizando{" "}
+              Atuação com Infraestrutura como Código e provisionamento imutável
+              e idempotente utilizando{" "}
               <span className="tech-highlight">Terraform</span> e{" "}
               <span className="tech-highlight">Ansible</span>, promovendo
               ambientes escaláveis, versionados e reproduzíveis. Experiência com{" "}
@@ -55,14 +62,24 @@ export default function About() {
               sistemas críticos utilizando{" "}
               <span className="tech-highlight">Zabbix</span>,{" "}
               <span className="tech-highlight">Grafana</span> e{" "}
-              <span className="tech-highlight">Prometheus</span>, com foco em
+              <span className="tech-highlight">Prometheus</span>, com
+              centralização de logs para auditoria técnica e foco em
               disponibilidade, performance e resposta a incidentes.
+              Gerenciamento seguro de secrets com{" "}
+              <span className="tech-highlight">HashiCorp Vault</span>,
+              protegendo dados sensíveis e fiduciários.
             </p>
 
             <p>
               Background sólido como SysAdmin{" "}
-              <span className="tech-highlight">Linux</span> (Proxmox, XCP-ng,
-              Apache2, Nginx, DNS, DHCP, NTP, pfSense) e{" "}
+              <span className="tech-highlight">Linux</span> com virtualização
+              resiliente em <span className="tech-highlight">Proxmox</span> e{" "}
+              <span className="tech-highlight">XCP-Ng</span> e backup
+              centralizado via{" "}
+              <span className="tech-highlight">
+                Proxmox Backup Server (PBS)
+              </span>
+              , além de Apache2, Nginx, DNS, DHCP, NTP e pfSense, e{" "}
               <span className="tech-highlight">Windows Server</span> (Active
               Directory, WSUS), aliado à experiência como Analista de Redes{" "}
               <span className="tech-highlight">Cisco</span>, com forte atuação
@@ -76,10 +93,14 @@ export default function About() {
               <span className="tech-highlight">Python</span> (DevNet) e{" "}
               <span className="tech-highlight">Shell Script</span>, com foco em
               automação operacional, integração de sistemas e suporte a
-              pipelines DevOps. Atuação em ambientes ágeis, com forte
-              colaboração entre times de desenvolvimento e infraestrutura, além
-              de experiência em liderança técnica, organização de demandas e
-              trabalho colaborativo em equipes multidisciplinares.
+              pipelines DevOps. Atuação em ambientes ágeis, com definição de{" "}
+              <span className="tech-highlight">
+                Checkpoints Críticos (Go/No-Go)
+              </span>{" "}
+              para mudanças em produção e documentação focada na capacitação
+              técnica de equipes internas, além de experiência em liderança
+              técnica, organização de demandas e trabalho colaborativo em
+              equipes multidisciplinares.
             </p>
           </div>
           <div className="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
