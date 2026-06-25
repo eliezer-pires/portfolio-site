@@ -3,6 +3,30 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "SRE Infrastructure — Framework de Alta Disponibilidade",
+    description:
+      "Framework Conceitual Agnóstico e Higienizado para Implementação de SRE e " +
+      "Alta Disponibilidade em Ambientes On-Premises Críticos. Repositório puramente " +
+      "sintático e arquitetural (OpSec): expõe a lógica de provisionamento declarativo, " +
+      "automação de resiliência e padrões SRE sem qualquer dado sensível — demonstrando " +
+      "maturidade em blindar informações governamentais e fiduciárias enquanto evidencia " +
+      "a engenharia por trás de ambientes de missão crítica.",
+    tags: [
+      "SRE",
+      "Alta Disponibilidade",
+      "Terraform",
+      "Ansible",
+      "Vault",
+      "Proxmox / XCP-Ng",
+      "PBS",
+      "On-Premises",
+      "OpSec",
+    ],
+    category: "SRE & Alta Disponibilidade",
+    github: "https://github.com/eliezer-pires/sre-infrastructure",
+    featured: true,
+  },
+  {
     title: "Infraestrutura de Rede VoIP para Aeronaves",
     description:
       "Projeto de infraestrutura de rede VoIP completa para aeronaves militares, incluindo redundância, QoS e segurança.",
@@ -18,6 +42,7 @@ const projects = [
     category: "Infraestrutura",
     github:
       "https://github.com/eliezer-pires/InfrastructureTImigration-and-Improve",
+    featured: true,
   },
   {
     title: "Automação On-Premises",
@@ -78,8 +103,64 @@ export default function Projects() {
           Trabalhos profissionais e projetos de estudo em DevOps/SRE
         </p>
 
+        {/* Projeto em destaque — largura total, maior peso visual */}
+        {projects
+          .filter((project) => project.featured)
+          .map((project) => (
+            <div
+              key={project.github}
+              className="
+                group relative overflow-hidden
+                rounded-2xl p-8 md:p-10 mb-10
+                bg-white/5 backdrop-blur-md
+                border border-primary-500/40
+                hover:border-primary-500
+                transition-all duration-300
+              "
+            >
+              <div className="absolute top-0 right-0 px-4 py-1.5 bg-primary-600/30 text-primary-300 text-xs font-semibold rounded-bl-xl border-l border-b border-primary-500/30">
+                ★ Projeto em Destaque
+              </div>
+
+              <span className="px-3 py-1 bg-primary-600/20 text-primary-400 text-sm rounded-full">
+                {project.category}
+              </span>
+
+              <h3 className="text-2xl md:text-3xl font-bold mt-4 mb-4 text-gray-100 group-hover:text-primary-400 transition-colors">
+                {project.title}
+              </h3>
+
+              <p className="text-gray-300 mb-6 leading-relaxed md:text-lg">
+                {project.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 bg-primary-600/10 text-primary-300 text-xs rounded border border-primary-600/30"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center gap-2"
+              >
+                Ver no GitHub
+                <ExternalLink size={18} />
+              </a>
+            </div>
+          ))}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+          {projects
+            .filter((project) => !project.featured)
+            .map((project) => (
             <div
               key={project.github}
               className="

@@ -5,10 +5,10 @@ const skillCategories = [
     icon: Container,
     title: "DevOps & Containers",
     skills: [
-      "Docker",
+      "Docker, Docker Swarm",
       "Kubernetes (deployments, services, ingress)",
       "CI/CD (conceitos, pipelines)",
-      "GitOps (em evolução)",
+      "GitHub Actions, GitLab CI",
     ],
   },
   {
@@ -19,6 +19,7 @@ const skillCategories = [
       "Cloudflare (DNS, Pages, CDN)",
       "Terraform (IaC)",
       "Ansible (automação)",
+      "VPS"
     ],
   },
   {
@@ -26,30 +27,49 @@ const skillCategories = [
     title: "Sistemas & Automação",
     skills: [
       "Linux (administração, hardening)",
+      "Virtualização resiliente (Proxmox / XCP-Ng)",
+      "Alta disponibilidade (Proxmox HA)",
+      "Backup centralizado (PBS)",
+      "Gestão de secrets (HashiCorp Vault)",
       "Python para automação",
-      "Bash scripting",
-      "GitHub Actions, GitLab CI",
+      "Bash scripting"
     ],
   },
   {
     icon: Network,
-    title: "Redes",
+    title: "Redes e Segurança",
     skills: [
       "Cisco (Switches e Routers)",
-      "VLAN, Roteamento, ACL",
-      "STP, EtherChannel",
+      "VLAN, Roteamento (OSPF, EIGRP, BGP, RIP)",
+      "ACL, STP, EtherChannel",
+      "DNS, DHCP, NTP",
+      "pfSense, Tacacs+, Radius, Kerberos",
+      "VoIP (Cisco Call Manager Express)",
       "Troubleshooting corporativo",
     ],
   },
   {
     icon: Eye,
     title: "Observabilidade",
-    skills: ["Zabbix", "Grafana", "Prometheus (estudos)", "CloudWatch"],
+    skills: [
+      "Zabbix",
+      "Grafana",
+      "Prometheus",
+      "Centralização de logs para auditoria",
+      "CloudWatch",
+    ],
   },
   {
     icon: Code,
     title: "Versionamento & Colaboração",
-    skills: ["Git", "GitHub", "GitLab", "Boas práticas de código"],
+    skills: [
+      "Git",
+      "GitOps",
+      "GitFlow",
+      "GitHub",
+      "GitLab",
+      "Boas práticas de código"
+    ],
   },
 ];
 
