@@ -1,4 +1,4 @@
-import { BookOpen, BookMarked, Target, Lightbulb } from "lucide-react";
+import { BookOpen, BookMarked, Target, Lightbulb, GraduationCap } from "lucide-react";
 
 const currentLearning = [
   {
@@ -20,6 +20,37 @@ const currentLearning = [
     area: "Terraform",
     topics: ["Módulos", "State Management", "Workspaces"],
     status: "Implementação de IaC em projeto real de Datacenter.",
+  },
+  {
+    area: "Inteligência Artificial Aplicada",
+    topics: [
+      "Agentes de IA e Orquestração",
+      "Skills, Rules e Workflows",
+      "Claude Code & AI Harness",
+      "Produtividade e Eficiência com IA",
+    ],
+    status: "Em progresso",
+  },
+];
+
+const academicEducation = [
+  {
+    degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+    institution: "Estácio de Sá",
+    status: "Concluído",
+    year: "2021",
+  },
+  {
+    degree: "Bacharel em Sistemas da Informação",
+    institution: "Estácio de Sá",
+    status: "Concluído",
+    year: "2025",
+  },
+  {
+    degree: "Pós-graduação em DevOps",
+    institution: "Estácio de Sá",
+    status: "Em andamento",
+    year: "",
   },
 ];
 
@@ -173,77 +204,120 @@ export default function Learning() {
           Roadmap de estudos e desenvolvimento profissional
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Estudos Atuais */}
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <BookOpen className="text-primary-500" size={28} />
-              <h3 className="text-2xl font-semibold">Estudos Atuais</h3>
-            </div>
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <BookOpen className="text-primary-500" size={28} />
+            <h3 className="text-2xl font-semibold">Estudos Atuais</h3>
+          </div>
 
-            <div className="grid grid-cols-1 gap-4">
-              {currentLearning.map((item, index) => (
-                <div key={index} className="card">
-                  <div className="flex items-start justify-between mb-3">
-                    <h4 className="text-lg font-semibold text-gray-100">
-                      {item.area}
-                    </h4>
-                    <span className="px-2 py-1 bg-primary-600/20 text-primary-400 text-xs rounded">
-                      {item.status}
-                    </span>
-                  </div>
-                  <ul className="space-y-2">
-                    {item.topics.map((topic, topicIndex) => (
-                      <li
-                        key={topicIndex}
-                        className="text-sm text-gray-400 flex items-start gap-2"
-                      >
-                        <span className="text-primary-500 mt-0.5">▸</span>
-                        <span>{topic}</span>
-                      </li>
-                    ))}
-                  </ul>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {currentLearning.map((item, index) => (
+              <div key={index} className="card">
+                <div className="flex items-start justify-between mb-3">
+                  <h4 className="text-lg font-semibold text-gray-100">
+                    {item.area}
+                  </h4>
+                  <span className="px-2 py-1 bg-primary-600/20 text-primary-400 text-xs rounded">
+                    {item.status}
+                  </span>
                 </div>
-              ))}
-            </div>
+                <ul className="space-y-2">
+                  {item.topics.map((topic, topicIndex) => (
+                    <li
+                      key={topicIndex}
+                      className="text-sm text-gray-400 flex items-start gap-2"
+                    >
+                      <span className="text-primary-500 mt-0.5">▸</span>
+                      <span>{topic}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
         <div className="mt-16">
+          <div className="flex items-center gap-4 mb-6">
+            <GraduationCap className="text-primary-500" size={28} />
+            <h3 className="text-2xl font-semibold">Formação Acadêmica</h3>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
+            {academicEducation.map((edu, index) => {
+              const isConcluded = edu.status === "Concluído";
+              return (
+                <div
+                  key={index}
+                  className={`card ${isConcluded ? "border-primary-600/40" : "border-yellow-500/40 bg-yellow-950/10"}`}
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span
+                      className={`px-2 py-0.5 rounded text-xs font-semibold ${isConcluded
+                        ? "bg-primary-600/20 text-primary-400"
+                        : "bg-yellow-600/20 text-yellow-400"
+                        }`}
+                    >
+                      {edu.status}
+                    </span>
+                    {edu.year && (
+                      <span className="text-xs text-gray-500">{edu.year}</span>
+                    )}
+                  </div>
+                  <h4 className="text-sm font-semibold text-gray-100 mb-1 leading-snug">
+                    {edu.degree}
+                  </h4>
+                  <p className="text-xs text-gray-400">{edu.institution}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="mt-0">
           <div className="flex items-center gap-4 mb-6">
             <Target className="text-primary-500" size={28} />
             <h3 className="text-2xl font-semibold">Roadmap 2026</h3>
           </div>
 
           <div className="space-y-4">
-            {certificationRoadmap.map((cert, index) => (
-              <div
-                key={index}
-                className="card hover:scale-105 transition-transform duration-300"
-              >
-                <div className="mb-3">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="px-2 py-0.5 bg-primary-600/20 text-primary-400 text-xs rounded font-semibold">
-                      {cert.quarter}
-                    </span>
-                    <span
-                      className={`px-2 py-0.5 rounded text-xs font-semibold ${cert.priority === "Alta"
-                        ? "bg-red-600/20 text-red-400"
-                        : "bg-blue-600/20 text-blue-400"
-                        }`}
-                    >
-                      {cert.priority}
-                    </span>
-                  </div>
-                  <h4 className="text-base font-semibold text-gray-100 mb-1">
-                    {cert.name}
-                  </h4>
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-gray-400">{cert.timeline}</span>
-                    <span className="text-blue-400">{cert.status}</span>
+            {certificationRoadmap.map((cert, index) => {
+              const isApproved = cert.status.includes("Concluído");
+              return (
+                <div
+                  key={index}
+                  className={`card hover:scale-105 transition-transform duration-300 ${isApproved ? "border-green-500/60 bg-green-950/10" : ""}`}
+                >
+                  {isApproved && (
+                    <div className="flex items-center gap-2 mb-3 px-3 py-2 bg-green-500/15 border border-green-500/30 rounded-lg">
+                      <span className="text-green-400 text-lg">✓</span>
+                      <span className="text-green-300 font-bold text-sm tracking-wide uppercase">Aprovado</span>
+                    </div>
+                  )}
+                  <div className="mb-3">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-2 py-0.5 bg-primary-600/20 text-primary-400 text-xs rounded font-semibold">
+                        {cert.quarter}
+                      </span>
+                      <span
+                        className={`px-2 py-0.5 rounded text-xs font-semibold ${cert.priority === "Alta"
+                          ? "bg-red-600/20 text-red-400"
+                          : "bg-blue-600/20 text-blue-400"
+                          }`}
+                      >
+                        {cert.priority}
+                      </span>
+                    </div>
+                    <h4 className="text-base font-semibold text-gray-100 mb-1">
+                      {cert.name}
+                    </h4>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-gray-400">{cert.timeline}</span>
+                      <span className={isApproved ? "text-green-400 font-semibold" : "text-blue-400"}>{cert.status}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="flex items-center gap-4 mt-12 mb-6">
