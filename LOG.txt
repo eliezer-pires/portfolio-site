@@ -1,0 +1,12 @@
+=== LOG DE ALTERAÇÕES — portfolio-site ===
+
+[2026-10-23]
+- src/components/About.tsx
+  * Card de métrica: "11+ / Anos em Infraestrutura" -> "12 / Anos em Tecnologia".
+    Motivo: rótulo mais amplo para acomodar a inclusão dos projetos de
+    desenvolvimento de sistemas no currículo.
+  * Adicionado comentário de cabeçalho (descrição, data, status).
+  * Backup criado: src/components/About.tsx.bak-20261023
+- CONTEXT.md — criado (não existia).
+- LOG.txt — criado (não existia).
+- AI_MEMORY.txt — criado (não existia).
