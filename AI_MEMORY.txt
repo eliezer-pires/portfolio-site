@@ -1,0 +1,41 @@
+=== AI_MEMORY — portfolio-site ===
+
+## Decisões técnicas tomadas e o porquê
+
+[2026-10-23] Rótulo do card de métrica em About: "Anos em Tecnologia"
+em vez de "Anos em Infraestrutura".
+- Opinião inicial do agente foi manter "Infraestrutura" (mais específico,
+  sustenta o posicionamento SRE). O Owner apontou que vai acrescentar ao
+  currículo seus projetos de desenvolvimento de sistemas — logo
+  "Infraestrutura" subcontaria a parte nova. Argumento do Owner prevaleceu:
+  "Tecnologia" é o guarda-chuva correto para infra + desenvolvimento.
+- Número cravado ("12") em vez de "12+": o "+" sobre um número já
+  arredondado soa defensivo; número fechado transmite autoridade.
+
+## Problemas encontrados e soluções
+
+[2026-10-23] Produção exibindo "8+" anos, divergente do código.
+- Investigação: `git log --all -S'>8+<' -- src/components/About.tsx`
+  mostrou que "8+" só existiu nos commits bd8f17a e e13f84b, ambos na
+  branch feat/sre-positioning-content. `main` tem "7+".
+- Causa: a URL observada é preview deploy do Cloudflare Pages da branch,
+  parado em build antiga — não a produção de `main`. Os 5 commits da
+  branch nunca foram mergeados.
+- Lição: antes de "corrigir" um valor visto em produção, confirmar em qual
+  commit/branch aquele valor realmente existe. O deploy do Cloudflare Pages
+  cria URL de preview por branch, fácil de confundir com produção.
+
+## Padrões de código que estamos usando
+
+- Conteúdo hardcoded em arrays no topo de cada componente — sem CMS/API.
+- Classes utilitárias de globals.css (@layer components): .section,
+  .container-custom, .card, .btn-primary, .heading-gradient, .section-title,
+  .tech-highlight. Nunca reimplementar esses estilos inline.
+- Ícones: somente lucide-react.
+- Copy em pt-BR.
+- Static export (output: "export") — sem useSearchParams, server actions,
+  API routes; images.unoptimized obrigatório.
+
+## Coisas que tentamos e não funcionaram
+
+- (nada registrado ainda)

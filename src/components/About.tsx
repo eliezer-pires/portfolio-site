@@ -1,3 +1,11 @@
+/**
+ * About.tsx — Seção "Sobre mim" do portfolio.
+ * Renderiza bio técnica (foco SRE/infra crítica) + cards de métricas
+ * (anos em tecnologia, certificações ativas).
+ * Modificado em: 2026-10-23
+ * Status: funcionando
+ */
+
 import Image from "next/image";
 
 export default function About() {
@@ -109,8 +117,8 @@ export default function About() {
           </div>
           <div className="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="card text-center">
-              <div className="text-4xl font-bold text-primary-500 mb-2">11+</div>
-              <div className="text-gray-400">Anos em Infraestrutura</div>
+              <div className="text-4xl font-bold text-primary-500 mb-2">12</div>
+              <div className="text-gray-400">Anos em Tecnologia</div>
             </div>
             <div className="card text-center">
               <div className="text-4xl font-bold text-primary-500 mb-2">2</div>
